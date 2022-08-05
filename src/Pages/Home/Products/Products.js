@@ -1,25 +1,27 @@
 import React, { useEffect, useState } from "react";
 import Product from "../Product/Product";
+import { useSelector, useDispatch } from "react-redux";
+import { fatchProducts } from "../../../Store/Features/productsSlaice";
 
 const Products = () => {
-  const [products, setProducts] = useState([]);
+  const dispatch = useDispatch();
+
+  const { isLoading, products, error } = useSelector((state) => state.products);
 
   useEffect(() => {
-    // dispatch(fetchProducts());
-    const fetchProducts = async () => {
-      const res = await fetch("https://fakestoreapi.com/products");
-      const data = await res.json();
-      console.log(data);
-      setProducts(data);
-    };
-    fetchProducts();
-  }, []);
+    dispatch(fatchProducts());
+  }, [dispatch]);
+
   return (
     <div>
+      {isLoading && <h1>Loading ...</h1>}
+      {error && <h1>{error}</h1>}
+
       <div className="productsWrapper">
-        {products.map((product) => (
-          <Product key={product.id} product={product}></Product>
-        ))}
+        {products &&
+          products.map((product) => (
+            <Product key={product.id} product={product}></Product>
+          ))}
       </div>
     </div>
   );
