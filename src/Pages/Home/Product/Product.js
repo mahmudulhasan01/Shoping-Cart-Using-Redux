@@ -1,7 +1,14 @@
 import React from "react";
+import { useDispatch } from "react-redux";
+import { add } from "../../../Store/Features/cardSlice";
 
 const Product = ({ product }) => {
-  const handleAdd = () => {};
+  const dispatch = useDispatch();
+
+  const handleAdd = (product) => {
+    dispatch(add(product));
+  };
+
   return (
     <div className="">
       <div className="card">

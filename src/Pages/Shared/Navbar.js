@@ -1,7 +1,9 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 const Navbar = () => {
+  const items = useSelector((state) => state.cart);
   return (
     <div
       style={{
@@ -31,7 +33,7 @@ const Navbar = () => {
           Cart
         </NavLink>
         <span style={{ fontWeight: "bold" }} className="cartCount">
-          Cart items: 0
+          Cart items: {items.length}
         </span>
       </div>
     </div>
