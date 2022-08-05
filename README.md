@@ -1,6 +1,6 @@
 # Shoping-Cart-Using-Redux
 
-This project is make With redux-toolkit__**[Click Hare For Live Site]([https://github.com/facebook/create-react-app](https://shoping-card-useing-redux-toolkit.netlify.app/)).**__
+This project is make With redux-toolkit [**Click Hare For Live Site**]([https://github.com/facebook/create-react-app](https://shoping-card-useing-redux-toolkit.netlify.app/)).
 - ![#1589F0](https://via.placeholder.com/15/1589F0/1589F0.png) `#1589F0`
 
 ## Available Scripts
