@@ -1,4 +1,5 @@
 import React from "react";
+import "../../../index.css";
 import { useDispatch } from "react-redux";
 import { add } from "../../../Store/Features/cardSlice";
 

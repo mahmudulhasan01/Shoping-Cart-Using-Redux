@@ -1,43 +1,37 @@
 import React from "react";
+import "../../index.css";
 import { NavLink } from "react-router-dom";
 import { useSelector } from "react-redux";
+import { BsCart4 } from "react-icons/bs";
 
 const Navbar = () => {
   const items = useSelector((state) => state.cart);
   return (
-    <div
-      style={{
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "space-between",
-      }}
-    >
+    <div className="navbar">
       <span className="logo">
-        <NavLink style={{ textDecoration: "none" }} className="navLink" to="/">
+        <NavLink className="navLink" to="/">
           Redux-Shop
         </NavLink>
       </span>
-      <div style={{ display: "flex", gap: "2rem" }}>
-        <NavLink
-          style={{ textDecoration: "none", fontWeight: "bold" }}
-          className="navLink"
-          to="/"
-        >
+      <div className="nav_destination">
+        <NavLink className="navLink" to="/">
           Home
         </NavLink>
-        <NavLink
-          style={{ textDecoration: "none", fontWeight: "bold" }}
-          className="navLink"
-          to="cart"
-        >
+        <NavLink className="navLink" to="cart">
           Cart
         </NavLink>
-        <span style={{ fontWeight: "bold" }} className="cartCount">
-          Cart items: {items.length}
+        <span
+          // style={{
+          //   display: "flex",
+          //   alignItems: "center",
+          //   justifyContent: "center",
+          // }}
+          className="cartCount navLink"
+        >
+          <BsCart4 className="cart_icon" /> {items.length}
         </span>
       </div>
     </div>
   );
 };
-
 export default Navbar;

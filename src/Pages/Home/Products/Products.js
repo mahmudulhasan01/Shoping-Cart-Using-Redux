@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import Product from "../Product/Product";
 import { useSelector, useDispatch } from "react-redux";
 import { fatchProducts } from "../../../Store/Features/productsSlaice";
