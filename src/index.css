@@ -35,7 +35,7 @@ img {
 }
 .productsWrapper {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 30px;
 }
 .btn {
@@ -97,53 +97,50 @@ img {
   
 }
 
-@media only screen and (max-width: 480px) {
-  .productsWrapper {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1rem;
-  }
-  .nav_destination{
-    display: flex;
-    gap: 0rem;
-  }
-
-  .cartCount {
-    font-weight: bold;
-    text-transform: uppercase;
-    margin-left: 0.6rem;
-  }
-
-  .cartWrapper{
-    background: white;
-  padding: 20px;
-  text-align: center;
-  border-radius: 10px;
-  }
-
-  .cartCard {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    align-items: center;
-    justify-content: space-between;
-    background: #fff;
-    margin-bottom: 10px;
-    padding: 10px;
-    border-radius: 5px;
-  }
-
-  .cart_product_price{
-    margin-left: -4.8rem;
-  }
-
-
-
-}
-
-@media only screen and (max-width: 750px) {
+/* ============= Media Queries (medium devices) ============= */
+@media screen and (max-width: 1024px){
   .productsWrapper {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    gap: 1.4rem;
+    gap: 1rem;
   }
-}
+  
+  }
+  
+  /* ============= Media Queries (small devices) ============= */
+  @media screen and (max-width: 600px){
+    .productsWrapper {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
+    .nav_destination{
+      display: flex;
+      gap: 0rem;
+    }
+    .cartCount {
+      font-weight: bold;
+      text-transform: uppercase;
+      margin-left: 0.6rem;
+    }
+    .cartWrapper{
+      background: white;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    }
+    .cartCard {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      justify-content: space-between;
+      background: #fff;
+      margin-bottom: 10px;
+      padding: 10px;
+      border-radius: 5px;
+    }
+    .cart_product_price{
+      margin-left: -4.8rem;
+    }
+  }
+
