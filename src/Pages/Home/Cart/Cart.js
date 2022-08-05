@@ -1,4 +1,5 @@
 import React from "react";
+import "../../../index.css";
 import { useDispatch, useSelector } from "react-redux";
 import { remove } from "../../../Store/Features/cardSlice";
 
